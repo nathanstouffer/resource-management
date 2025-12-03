@@ -23,11 +23,11 @@ namespace raii
     {
         std::memcpy(m_values, rhs.m_values, m_rows * m_cols * sizeof(double));
     }
-    
+
     matrix::matrix(matrix&& rhs) noexcept
-    : m_rows(rhs.m_rows)
-    , m_cols(rhs.m_cols)
-    , m_values(rhs.m_values)
+        : m_rows(rhs.m_rows)
+        , m_cols(rhs.m_cols)
+        , m_values(rhs.m_values)
     {
         rhs.m_rows = 0;
         rhs.m_cols = 0;

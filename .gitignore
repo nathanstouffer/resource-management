@@ -43,3 +43,6 @@
 # build folders
 .build/
 build/
+
+# IDE folders
+.vscode/
