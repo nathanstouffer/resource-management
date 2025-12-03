@@ -17,13 +17,14 @@ namespace raii
         // destructor
         ~matrix();
 
-        // copy operations
+        // copy constructor
         matrix(matrix const& rhs);
-        matrix& operator=(matrix rhs);
 
-        // move operations
-        //matrix(matrix&& rhs) noexcept;
-        //matrix& operator=(matrix&& rhs) noexcept;
+        // move constructor
+        matrix(matrix&& rhs) noexcept;
+
+        // assignment operator (copied by value)
+        matrix& operator=(matrix rhs);
 
         void swap(matrix& rhs) noexcept
         {
